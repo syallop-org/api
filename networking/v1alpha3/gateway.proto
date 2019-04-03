@@ -414,6 +414,10 @@ message Server {
   // be forwarded to by default. Format should be `127.0.0.1:PORT` or
   // `unix:///path/to/socket` or `unix://@foobar` (Linux abstract namespace).
   string default_endpoint = 5;
+
+  // The maximum number of concurrent streams to allow over a single HTTP2
+  // connection.
+  int32 http2_max_concurrent_streams = 6;
 }
 
 // Port describes the properties of a specific port of a service.
